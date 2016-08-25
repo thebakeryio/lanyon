@@ -21,3 +21,11 @@ gems:               [jekyll-paginate]
 
 # Custom vars
 version:             1.0.0
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      author: "The Bakery"
