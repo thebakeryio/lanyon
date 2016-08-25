@@ -18,11 +18,11 @@
 
     {% for item in site.data.table_of_contents.entries %}
       {% if item.permalink %}
-        <a class="sidebar-nav-item{% if page.url == item.permalink %} active{% endif %}" href="{{item.permalink}}">{{item.title}}</a>
+        <a class="sidebar-nav-item{% if page.url == item.permalink %} active{% endif %}" href="{{site.baseurl}}{{item.permalink}}">{{item.title}}</a>
       {% else %}
         <span class="sidebar-nav-item">{{item.title}}</span>
         {% for subItem in item.items %}
-          <a style="padding-left:50px;" class="sidebar-nav-item{% if page.url == subItem.permalink %} active{% endif %}" href="{{subItem.permalink}}">{{subItem.title}}
+          <a style="padding-left:50px;" class="sidebar-nav-item{% if page.url == subItem.permalink %} active{% endif %}" href="{{site.baseurl}}{{subItem.permalink}}">{{subItem.title}}
           </a>
         {% endfor %}
       {% endif %}
