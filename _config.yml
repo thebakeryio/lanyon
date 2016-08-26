@@ -22,6 +22,8 @@ gems:               [algoliasearch-jekyll]
 # Custom vars
 version:             1.0.0
 
+exclude: [vendor]
+
 defaults:
   -
     scope:
