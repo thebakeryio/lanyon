@@ -20,7 +20,10 @@
       </div>
 
       <div class="container content">
-        <div class="algolia__initial-content js-algolia__initial-content">{{ content }}</div>
+        <div class="algolia__initial-content js-algolia__initial-content">
+          {% include edit_this_page.html %}
+          {{ content }}
+        </div>
 
         <div class="algolia__search-content js-algolia__search-content">
           <h1 class="page-title">Search</h1>

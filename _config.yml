@@ -24,6 +24,9 @@ version:             1.0.0
 
 exclude:             [vendor]
 
+github:
+  repository_url:    https://github.com/thebakeryio/lanyon
+
 algolia:
   application_id:    'RJLGF63QKK'
   index_name:        'docs'
