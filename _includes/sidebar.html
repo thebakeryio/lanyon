@@ -19,7 +19,7 @@
       {% else %}
         <span class="sidebar-nav-item">{{item.title}}</span>
         {% for subItem in item.items %}
-          <a style="padding-left:50px;" class="sidebar-nav-item{% if page.url == subItem.permalink %} active{% endif %}" href="{{site.baseurl}}{{subItem.permalink}}">{{subItem.title}}
+          <a class="sidebar-nav-item sidebar-sub-item {% if page.url == subItem.permalink %} active{% endif %}" href="{{site.baseurl}}{{subItem.permalink}}">{{subItem.title}}
           </a>
         {% endfor %}
       {% endif %}

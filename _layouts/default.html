@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="sidebar-overlay">
+  <body class="sidebar-overlay theme-base-08">
 
     {% include sidebar.html %}
 
@@ -31,19 +31,32 @@
         var toggle = document.querySelector('.sidebar-toggle');
         var sidebar = document.querySelector('#sidebar');
         var checkbox = document.querySelector('#sidebar-checkbox');
+        var header = document.querySelector('.masthead');
 
         // XX: show the bar! 🍻
         checkbox.checked = true;
 
-        document.addEventListener('click', function(e) {
-          var target = e.target;
+        // listen for scroll event to do positioning & highlights
+        window.addEventListener('scroll', updateSidebar);
+        window.addEventListener('resize', showSidebar);
 
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
+        function updateSidebar () {
+          var doc = document.documentElement;
+          var top = doc && doc.scrollTop || document.body.scrollTop;
+          var headerHeight = header.offsetHeight;
+          if (top > headerHeight) {
+            sidebar.className = 'sidebar fix-sidebar';
+          } else {
+            sidebar.className = 'sidebar';
+          }
+        }
 
-          checkbox.checked = false;
-        }, false);
+        function showSidebar () {
+          if(window.innerWidth > 895){
+            checkbox.checked = true;
+          }
+        }
+
       })(document);
     </script>
   </body>
