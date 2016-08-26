@@ -12,6 +12,9 @@ url:                 'https://thebakeryio.github.io/lanyon'
 #baseurl:             ''
 baseurl:             'https://thebakeryio.github.io/lanyon'
 
+sass:
+  style: compressed
+
 # About/contact
 author:
   name:              Mark Otto
