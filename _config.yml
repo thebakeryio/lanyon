@@ -10,7 +10,6 @@ description:         'A reserved <a href="http://jekyllrb.com" target="_blank">J
 url:                 http://lanyon.getpoole.com
 #baseurl:             ''
 baseurl:             'https://thebakeryio.github.io/lanyon'
-paginate:            5
 
 # About/contact
 author:
