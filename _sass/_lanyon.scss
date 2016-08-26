@@ -51,7 +51,6 @@ h1, h2, h3, h4, h5, h6 {
   // letter-spacing: -.025rem;
 }
 
-
 /*
  * Wrapper
  *
@@ -237,7 +236,7 @@ a.sidebar-nav-item:focus {
   border-radius: 15px;
   margin-right: 10px;
   transition: border-color 0.3s ease;
-  background: #fff url("../images/search.png") 8px 5px no-repeat;
+  background: #fff url("/public/images/search.png") 8px 5px no-repeat;
   background-size: 20px;
 }
 
@@ -306,16 +305,15 @@ a.sidebar-nav-item:focus {
   }
 }
 
-.sidebar-search {
+.sidebar-search, .sidebar-social-buttons {
   margin-top: 2rem;
   padding: 0 1.5rem;
-}
-
-@media (min-width: 40em) {
-  .sidebar-search {
+  
+  @media (min-width: 40em) {
     padding: 0 2.5rem;
   }
 }
+
 
 /* Slide effect
  *
