@@ -4,12 +4,13 @@
 permalink:           pretty
 
 # Setup
+project_name:         Baker
 title:               'Baker Documentation'
 tagline:             'React Native - Zero to MVP'
 description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 url:                 'https://thebakeryio.github.io/lanyon'
-baseurl:             ''
-# baseurl:             'https://thebakeryio.github.io/lanyon'
+#baseurl:             ''
+baseurl:             'https://thebakeryio.github.io/lanyon'
 
 # About/contact
 author:
@@ -26,6 +27,9 @@ exclude:             [vendor]
 
 github:
   repository_url:    https://github.com/thebakeryio/lanyon
+
+twitter:
+  handle:            bakeryhq
 
 algolia:
   application_id:    'RJLGF63QKK'
