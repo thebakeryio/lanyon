@@ -341,8 +341,8 @@ a.sidebar-nav-item:focus {
 }
 
 #sidebar-checkbox:checked + .sidebar {
-  z-index: 10;
   visibility: visible;
+  z-index: 10;
 }
 #sidebar-checkbox:checked ~ .sidebar,
 #sidebar-checkbox:checked ~ .wrap
@@ -548,6 +548,7 @@ a.sidebar-nav-item:focus {
   }
 
   .sidebar {
+    z-index: 10;
     visibility: visible;
     -webkit-transform: translateX(16rem);
       -ms-transform: translateX(16rem);
