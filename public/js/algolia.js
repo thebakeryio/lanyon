@@ -21,7 +21,7 @@ $(function(config) {
   var $searchContentResults = $searchContent.find('.algolia__results');
   $searchContentResults.on('click', 'a', onLinkClick);
   // Rendering templates
-  var templateResult = Hogan.compile($('#algolia__template').html());
+  var templateResult = Handlebars.compile($('#algolia__template').html());
   var templateNoResults = $('#algolia__template--no-results').html();
 
   var lastQuery;
@@ -66,7 +66,7 @@ $(function(config) {
       hit.css_selector = encodeURI(hit.css_selector);
       hit.full_url = config.baseurl + hit.url;
 
-      return templateResult.render(hit);
+      return templateResult(hit);
     }).join('');
   }
 
