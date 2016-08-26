@@ -5,9 +5,14 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
 
-  {% include social_buttons.html %}
+  <div class="sidebar-search">
+    <input type="text" class="algolia__input js-algolia__input" autocomplete="off" name="query" />
+  </div>
 
-  <input type="text" class="algolia__input js-algolia__input" autocomplete="off" name="query" placeholder="Search in this site..." />
+  <div class="sidebar-social-buttons">
+    {% include social_buttons.html %}
+  </div>
+
   <nav class="sidebar-nav">
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
