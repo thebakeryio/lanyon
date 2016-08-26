@@ -55,7 +55,7 @@
 
         // listen for scroll event to do positioning & highlights
         window.addEventListener('scroll', updateSidebar);
-        window.addEventListener('resize', showSidebar);
+        // window.addEventListener('resize', showSidebar);
 
         function updateSidebar () {
           var doc = document.documentElement;
@@ -68,11 +68,11 @@
           }
         }
 
-        function showSidebar () {
-          if(window.innerWidth > 895){
-            checkbox.checked = true;
-          }
-        }
+        // function showSidebar () {
+        //   if(window.innerWidth > 895){
+        //     checkbox.checked = true;
+        //   }
+        // }
 
       })(document);
     </script>
