@@ -17,10 +17,20 @@ author:
   url:               https://twitter.com/mdo
   email:             markdotto@gmail.com
 
-gems:               [algoliasearch-jekyll]
+gems:                [algoliasearch-jekyll]
 
 # Custom vars
 version:             1.0.0
+
+exclude:             [vendor]
+
+github:
+  repository_url:    https://github.com/thebakeryio/lanyon
+
+algolia:
+  application_id:    'RJLGF63QKK'
+  index_name:        'docs'
+  read_only_api_key: 'c9e5cf2be0bd488a1e022c1f746f43c0'
 
 defaults:
   -
