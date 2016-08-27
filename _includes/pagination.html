@@ -3,7 +3,7 @@
 <script>
   try {
     var tableOfContents = JSON.parse('{{site.data.table_of_contents}}'.replace(/\=\>/g,':'));
-    console.log(tableOfContents);
+    var baseUrl = '{{site.baseurl}}';
 
     function flattenTableOfContents(items) {
       var result = [];
@@ -25,7 +25,6 @@
     };
 
     function locateCurrentPageEntry(items) {
-      var baseUrl = '{{site.baseurl}}';
       var permalink = baseUrl === '' ? window.location.pathname
         : window.location.href.split(baseUrl)[1];
 
@@ -50,7 +49,7 @@
       }
 
       link.classList.remove('hide');
-      link.setAttribute('href', href);
+      link.setAttribute('href', [baseUrl, href].join(''));
       link.innerHTML = title;
     }
 
