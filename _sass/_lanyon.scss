@@ -74,12 +74,12 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 32rem;
 }
-@media (min-width: 38em) {
+@media (min-width: $small-bp) {
   .container {
     max-width: 36rem;
   }
 }
-@media (min-width: 56em) {
+@media (min-width: $large-bp) {
   .container {
     max-width: 38rem;
   }
@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (max-width: 48em) {
+@media (max-width: $medium-bp) {
   .masthead-title {
     text-align: center;
   }
@@ -206,7 +206,7 @@ a.sidebar-nav-item:focus {
 }
 
 
-@media (min-width: 40em) {
+@media (min-width: $small-bp) {
   .sidebar-item {
     padding: 1.5rem;
   }
@@ -263,17 +263,17 @@ a.sidebar-nav-item:focus {
   background-color: #fff;
   border-radius: .25rem;
   cursor: pointer;
-}
-
-.sidebar-toggle:before {
-  display: inline-block;
-  width: 1rem;
-  height: .75rem;
-  content: "";
-  background-image: -webkit-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
-  background-image:    -moz-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
-  background-image:     -ms-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
-  background-image:         linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
+ 
+  &:before {
+    display: inline-block;
+    width: 1rem;
+    height: .75rem;
+    content: "";
+    background-image: -webkit-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
+    background-image:    -moz-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
+    background-image:     -ms-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
+    background-image:         linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
+  }
 }
 
 .sidebar-toggle:active,
@@ -292,7 +292,7 @@ a.sidebar-nav-item:focus {
   background-image:         linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
 }
 
-@media (min-width: 30.1em) {
+@media (min-width: $small-bp) {
   .sidebar-toggle {
     position: fixed;
   }
@@ -308,7 +308,7 @@ a.sidebar-nav-item:focus {
   margin-top: 2rem;
   padding: 0 1.5rem;
   
-  @media (min-width: 40em) {
+  @media (min-width: $small-bp) {
     padding: 0 2.5rem;
   }
 }
@@ -351,64 +351,6 @@ a.sidebar-nav-item:focus {
       -ms-transform: translateX(16rem);
           transform: translateX(16rem);
 }
-
-
-/*
- * Posts and pages
- *
- * Each post is wrapped in `.post` and is used on default and post layouts. Each
- * page is wrapped in `.page` and is only used on the page layout.
- */
-
-.page,
-.post {
-  margin-bottom: 4em;
-}
-
-/* Blog post or page title */
-.page-title,
-.post-title,
-.post-title a {
-  color: #303030;
-}
-.page-title,
-.post-title {
-  margin-top: 0;
-}
-
-/* Meta data line below post title */
-.post-date {
-  display: block;
-  margin-top: -.5rem;
-  margin-bottom: 1rem;
-  color: #9a9a9a;
-}
-
-/* Related posts */
-.related {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  border-top: 1px solid #eee;
-}
-.related-posts {
-  padding-left: 0;
-  list-style: none;
-}
-.related-posts h3 {
-  margin-top: 0;
-}
-.related-posts li small {
-  font-size: 75%;
-  color: #999;
-}
-.related-posts li a:hover {
-  color: #268bd2;
-  text-decoration: none;
-}
-.related-posts li a:hover small {
-  color: inherit;
-}
-
 
 /*
  * Pagination
@@ -531,7 +473,7 @@ a.sidebar-nav-item:focus {
   box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
 }
 
-@media (min-width: 68em) {
+@media (min-width: $layout-bp) {
   .sidebar-overlay #sidebar-checkbox:checked ~ .sidebar,
   .sidebar-overlay #sidebar-checkbox:checked ~ .sidebar-toggle {
     box-shadow: none;
